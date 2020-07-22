@@ -105,42 +105,6 @@ class _CountryDetailPageState extends State<CountryDetailPage> {
                             )
                           ],
                         ),
-                      StatisticCard(
-                        color: Colors.orange,
-                        text: 'Total cases',
-                        icon: Icons.timeline,
-                        stats: _countryInfo.cases,
-                      ),
-                      StatisticCard(
-                        color: Colors.green,
-                        text: 'Total recovered',
-                        icon: Icons.verified_user,
-                        stats: _countryInfo.recovered,
-                      ),
-                      StatisticCard(
-                        color: Colors.blue,
-                        text: 'Active cases',
-                        icon: Icons.whatshot,
-                        stats: _countryInfo.active,
-                      ),
-                      StatisticCard(
-                        color: Colors.black,
-                        text: 'Critical cases',
-                        icon: Icons.battery_alert,
-                        stats: _countryInfo.critical,
-                      ),
-                      StatisticCard(
-                        color: Colors.blueGrey,
-                        text: 'Total tests',
-                        icon: Icons.youtube_searched_for,
-                        stats: _countryInfo.totalTests,
-                      ),
-                      StatisticCard(
-                        color: Colors.red,
-                        text: 'Total deaths',
-                        icon: Icons.airline_seat_individual_suite,
-                        stats: _countryInfo.deaths,
-                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Card(
@@ -172,7 +136,44 @@ class _CountryDetailPageState extends State<CountryDetailPage> {
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      StatisticCard(
+                        color: Colors.blueAccent,
+                        text: 'Total cases',
+                        icon: Icons.assignment_ind,
+                        stats: _countryInfo.cases,
+                      ),
+                      StatisticCard(
+                        color: Colors.green,
+                        text: 'Total recovered',
+                        icon: Icons.assignment_turned_in,
+                        stats: _countryInfo.recovered,
+                      ),
+                      StatisticCard(
+                        color: Colors.blue,
+                        text: 'Active cases',
+                        icon: Icons.assignment,
+                        stats: _countryInfo.active,
+                      ),
+                      StatisticCard(
+                        color: Colors.black,
+                        text: 'Critical cases',
+                        icon: Icons.assignment_return,
+                        stats: _countryInfo.critical,
+                      ),
+                      StatisticCard(
+                        color: Colors.blueGrey,
+                        text: 'Total tests',
+                        icon: Icons.assignment_ind,
+                        stats: _countryInfo.totalTests,
+                      ),
+                      StatisticCard(
+                        color: Colors.red,
+                        text: 'Total deaths',
+                        icon: Icons.assignment_returned,
+                        stats: _countryInfo.deaths,
+                      ),
+
                     ],
                   ),
       ),

@@ -23,12 +23,14 @@ class _GlobalInfoPageState extends State<GlobalInfoPage> {
 
   HomeCountry _homeCountry;
 
+  bool value = false;
   @override
   void initState() {
     super.initState();
     _fetchHomeCountry();
     _fetchGlobalStats();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +55,23 @@ class _GlobalInfoPageState extends State<GlobalInfoPage> {
                 ? buildErrorMessage()
                 : ListView(
                     children: <Widget>[
+                      Expanded(
+                          child: Container(
+                            child: Column(
+                              children:[CheckboxListTile(
+                                title: Text("Contrubute"),
+                                value: value,
+                                onChanged: (val) {
+                                  setState(() {
+                                    value = val;
+                                    if (val == true) {
+                                      value = true;
+                                    }
+                                  });
+                                },
+                              )]
+                            ),
+                          )),
                       if (_homeCountry != null)
                         ListTile(
                           leading: CircleAvatar(
@@ -74,24 +93,6 @@ class _GlobalInfoPageState extends State<GlobalInfoPage> {
                             ),
                           ),
                         ),
-                      StatisticCard(
-                        color: Colors.orange,
-                        text: 'Total cases',
-                        icon: Icons.timeline,
-                        stats: _stats.cases,
-                      ),
-                      StatisticCard(
-                        color: Colors.green,
-                        text: 'Total recovered',
-                        icon: Icons.whatshot,
-                        stats: _stats.recovered,
-                      ),
-                      StatisticCard(
-                        color: Colors.red,
-                        text: 'Total deaths',
-                        icon: Icons.airline_seat_individual_suite,
-                        stats: _stats.deaths,
-                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Card(
@@ -123,7 +124,26 @@ class _GlobalInfoPageState extends State<GlobalInfoPage> {
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      StatisticCard(
+                        color: Colors.blueAccent,
+                        text: 'Total cases',
+                        icon: Icons.assignment_ind,
+                        stats: _stats.cases,
+                      ),
+                      StatisticCard(
+                        color: Colors.green,
+                        text: 'Total recovered',
+                        icon: Icons.assignment_turned_in,
+                        stats: _stats.recovered,
+                      ),
+                      StatisticCard(
+                        color: Colors.red,
+                        text: 'Total deaths',
+                        icon: Icons.assignment_returned,
+                        stats: _stats.deaths,
+                      ),
+
                     ],
                   ),
       ),

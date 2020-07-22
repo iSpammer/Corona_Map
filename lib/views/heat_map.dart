@@ -16,13 +16,6 @@ class _HeatMapScreenState extends State<HeatMapScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'About',
-          style: TextStyle(color: Theme.of(context).accentColor),
-        ),
-        actions: <Widget>[ThemeSwitch()],
-      ),
       body: WebView(
         initialUrl: "http://192.168.1.2:8080/",
         javascriptMode: JavascriptMode.unrestricted,

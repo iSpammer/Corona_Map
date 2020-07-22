@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
         items: [
           FloatingNavbarItem(icon: Icons.home, title: 'Home'),
           FloatingNavbarItem(icon: Icons.list, title: 'Countries'),
-          FloatingNavbarItem(icon: Icons.map, title: 'HearMap'),
+          FloatingNavbarItem(icon: Icons.map, title: 'HeatMap'),
 //        FloatingNavbarItem(icon: Icons.settings, title: 'Settings'),
         ],
       ),

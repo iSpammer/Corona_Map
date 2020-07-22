@@ -27,6 +27,14 @@ class StatisticCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
+              Align(
+                  alignment: Alignment.topRight,
+                  child: Icon(
+                    icon,
+                    size: 55.0,
+                    color: color,
+                  )),
+              SizedBox(width: 10,),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,13 +50,7 @@ class StatisticCard extends StatelessWidget {
                   ],
                 ),
               ),
-              Align(
-                  alignment: Alignment.topRight,
-                  child: Icon(
-                    icon,
-                    size: 100.0,
-                    color: color,
-                  ))
+
             ],
           ),
         ),

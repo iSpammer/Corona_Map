@@ -53,25 +53,13 @@ class _CountryListPageState extends State<CountryListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Countries',
-          style: TextStyle(color: Theme.of(context).accentColor),
-        ),
-        leading: Icon(
-          Icons.public,
-          color: Theme.of(context).accentColor,
-        ),
-        actions: <Widget>[
-          ThemeSwitch(),
-        ],
-      ),
       body: _isLoading
           ? Loader()
           : _countries == null
               ? buildErrorMessage()
               : Column(
                   children: <Widget>[
+                    SizedBox(height: 25,),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Card(
